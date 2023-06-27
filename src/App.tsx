@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { Suspense } from 'react';
 import Spinner from './components/Spinner/Spinner';
 import useTheme from './theme/useTheme';
+import { classNames } from './components/helpers/classNames/classNames';
 
 
 const App = () => {
@@ -13,7 +14,7 @@ const App = () => {
   const {theme, toggleTheme} = useTheme();
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames('app', {}, [theme])}>
       <button onClick={toggleTheme}>toggle</button>
         <Link to={'/'}>Главная</Link>
         <Link to={'/about'}>О сайте</Link>
