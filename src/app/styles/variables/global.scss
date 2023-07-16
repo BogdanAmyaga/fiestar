@@ -1,6 +1,6 @@
 :root{
 
-    --font-family-main: Verdana, 'Trebuchet MS', sans-serif;
+    --font-family-main: 'Nunito', sans-serif;;
 
     --font-size-m: 16px;
     --font-line-m: 24px;
@@ -10,5 +10,7 @@
     --font-size-l: 24px;
     --font-line-l: 32px;
     --font-m: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+    --navbar-height: 80px;
 
 }
