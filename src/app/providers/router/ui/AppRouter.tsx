@@ -1,4 +1,4 @@
-import Spinner from 'components/Spinner/Spinner'
+import Spinner from 'shared/ui/Spinner/Spinner'
 import { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { routeConfig } from 'shared/config/routeConfig/routeConfig'
