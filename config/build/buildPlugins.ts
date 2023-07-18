@@ -18,6 +18,7 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
         //  плагин позволяет использовать переменные
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev)
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }
