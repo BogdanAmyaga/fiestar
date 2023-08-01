@@ -5,36 +5,36 @@ import { BuildOptions } from "./types/config";
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
     const svgLoader = {
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
     }
 
     const babelLoader =  {
-      test: /\.(js|jsx|tsx)$/,
-      exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            ['@babel/preset-env']
-          ],
-          "plugins": [[
-            "i18next-extract", {
-              locales: ["ru", "en"],
-              keyAsDefaultValue: true
+        test: /\.(js|jsx|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: 'babel-loader',
+            options: {
+                presets: [
+                    ['@babel/preset-env']
+                ],
+                "plugins": [[
+                    "i18next-extract", {
+                        locales: ["ru", "en"],
+                        keyAsDefaultValue: true
+                    }
+                ]]
             }
-          ]]
         }
-      }
     }
 
     const fileLoader =  {
-      test: /\.(png|jpe?g|gif|ttf|woff|woff2)$/i,
-      use: [
-        {
-          loader: 'file-loader',
-        },
-      ],
+        test: /\.(png|jpe?g|gif|ttf|woff|woff2)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+            },
+        ],
     }
 
     const typescriptLoader = {
@@ -46,19 +46,19 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     const styleLoader = {
         test: /\.s[ac]ss$/i,
         use: [
-          options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                auto: (resPath: string) => resPath.includes('.module.scss') ? true : false,
-                localIdentName: options.isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]'
-              },
+            options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            {
+                loader: 'css-loader',
+                options: {
+                    modules: {
+                        auto: (resPath: string) => resPath.includes('.module.scss') ? true : false,
+                        localIdentName: options.isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]'
+                    },
+                },
             },
-          },
-          "sass-loader",
+            "sass-loader",
         ],
-      }
+    }
 
     return [
         fileLoader,
