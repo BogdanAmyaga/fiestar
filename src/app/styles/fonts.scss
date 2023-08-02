@@ -1,39 +1,41 @@
 @font-face {
-    font-family: 'Nunito';
-    src: url('/src/shared/assets/fonts/Nunito-Bold.ttf') format('ttf');
+    font-family: Nunito;
+    src: url("/src/shared/assets/fonts/Nunito-Bold.ttf") format("ttf");
     font-weight: bold;
     font-style: normal;
 }
+
 @font-face {
-    font-family: 'Nunito';
-    src: url('/src/shared/assets/fonts/Nunito-Light.ttf') format('ttf');
+    font-family: Nunito;
+    src: url("/src/shared/assets/fonts/Nunito-Light.ttf") format("ttf");
     font-weight: 300;
     font-style: normal;
 }
+
 @font-face {
-    font-family: 'Nunito';
-    src: url('/src/shared/assets/fonts/Nunito-Bold.ttf') format('ttf');
+    font-family: Nunito;
+    src: url("/src/shared/assets/fonts/Nunito-Bold.ttf") format("ttf");
     font-weight: bold;
     font-style: normal;
 }
-  
-  @font-face {
-    font-family: 'Nunito';
-    src: url('/src/shared/assets/fonts/Nunito-Regular.ttf') format('ttf');
+
+@font-face {
+    font-family: Nunito;
+    src: url("/src/shared/assets/fonts/Nunito-Regular.ttf") format("ttf");
     font-weight: normal;
     font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Nunito';
-    src: url('/src/shared/assets/fonts/Nunito-SemiBold.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("/src/shared/assets/fonts/Nunito-SemiBold.ttf") format("ttf");
     font-weight: 700;
     font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Nunito';
-    src: url('/src/shared/assets/fonts/Nunito-Black.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url("/src/shared/assets/fonts/Nunito-Black.ttf") format("ttf");
     font-weight: 900;
     font-style: normal;
-  }
+}
