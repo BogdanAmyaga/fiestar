@@ -52,7 +52,9 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
                 options: {
                     modules: {
                         auto: (resPath: string) => resPath.includes('.module.scss') ? true : false,
-                        localIdentName: options.isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]'
+                        localIdentName: options.isDev ? 
+                            '[path][name]__[local]--[hash:base64:5]' : 
+                            '[hash:base64:8]'
                     },
                 },
             },

@@ -43,7 +43,8 @@ module.exports = {
     "no-shadow": "off",
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "max-len": ['error', { ignoreComments: true, code: 100 }]
     },
     "root": true
     }
