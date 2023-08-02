@@ -6,7 +6,8 @@ module.exports = {
     "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:i18next/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -17,11 +18,16 @@ module.exports = {
     "ecmaVersion": "latest",
     "sourceType": "module"
     },
-    "plugins": ["react", "@typescript-eslint"],
+    "plugins": [
+        "react", 
+        "@typescript-eslint",
+        "i18next"
+    ],
     "rules": {
     "react/jsx-indent": [2, 4],
     "react/jsx-indent-props": [2, 4],
     "indent": [2, 4],
+    "i18next/no-literal-string": ['error', { markupOnly: true }],
     "react/jsx-filename-extension": [
     2,
     { "extensions": [".js", ".jsx", ".tsx"] }
