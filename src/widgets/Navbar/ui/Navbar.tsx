@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Navbar.module.scss';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
@@ -29,7 +29,7 @@ const Navbar = ({className}: NavbarProps) => {
             </div>
 
         </div>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;

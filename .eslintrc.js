@@ -29,10 +29,11 @@ module.exports = {
     "react/jsx-indent-props": [2, 4],
     "indent": [2, 4],
     "i18next/no-literal-string": ['error', { markupOnly: true }],
-    "react/jsx-filename-extension": [
-    2,
-    { "extensions": [".js", ".jsx", ".tsx"] }
+    "react/jsx-filename-extension": [ 2, { 
+        "extensions": [".js", ".jsx", ".tsx"] 
+        }
     ],
+    "semi": ["error", "always"], 
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "no-unused-vars": "warn",

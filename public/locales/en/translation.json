@@ -1,5 +1,7 @@
 {
    "Перевод" : "Translate",
    "Язык": "English",
-   "Переключить": "Toggle"
+   "Переключить": "Toggle",
+   "Произошла ошибка": "Something wents wrong",
+   "Перезагрузить страницу": "Reload page"
 }
