@@ -3,9 +3,13 @@
 }
 
 .primary {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
-.inverted {
+.secondary {
     color: var(--inverted-primary-color);
+}
+
+.red {
+    color: red;
 }
