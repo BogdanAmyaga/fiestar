@@ -1,10 +1,8 @@
 import React from 'react';
 import className from './Spinner.module.scss';
 
-const Spinner = () => {
-    return (
-        <section className={className.loader}></section>
-    );
-};
+const Spinner = () => (
+    <section className={className.loader} />
+);
 
 export default Spinner;
