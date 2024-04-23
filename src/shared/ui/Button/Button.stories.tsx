@@ -25,6 +25,11 @@ Clear.args = {
     children: 'Text',
     theme: EButtonTheme.CLEAR,
 };
+export const ClearInverted = Template.bind({});
+ClearInverted.args = {
+    children: 'Text',
+    theme: EButtonTheme.CLEAR_INVERTED,
+};
 
 export const Outline = Template.bind({});
 Outline.args = {
@@ -54,12 +59,14 @@ SizeMWithSquare.args = {
     square: true,
     size: EButtonSize.M,
 };
+
 export const SizeLWithSquare = Template.bind({});
 SizeLWithSquare.args = {
     children: '+',
     square: true,
     size: EButtonSize.L,
 };
+
 export const SizeXLWithSquare = Template.bind({});
 SizeXLWithSquare.args = {
     children: '+',

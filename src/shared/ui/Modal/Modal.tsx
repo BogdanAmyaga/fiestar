@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next';
 import {
     FC, ReactNode, MouseEvent, useState, useRef, useEffect, useCallback,
 } from 'react';
+import { useTheme } from 'app/providers/ThemeProvider';
 import cls from './Modal.module.scss';
+import { Portal } from '../Portal/Portal';
 
 interface ModalProps {
  className?: string;
@@ -55,21 +57,25 @@ export const Modal:FC<ModalProps> = (props) => {
             window.addEventListener('keydown', onKeyDown);
         }
         return () => {
+            // ! очистка таймера и асинхронных функций и методов
             clearTimeout(timerRef.current);
             window.removeEventListener('keydown', onKeyDown);
         };
     }, [isOpen, onKeyDown]);
 
     return (
-        <div className={classNames(cls.Modal, mods, [className])}>
-            <div className={cls.overlay} onClick={closeHandler}>
-                <div
-                    className={cls.content}
-                    onClick={onContentClick}
-                >
-                    {children}
+        <Portal>
+            <div className={classNames(cls.Modal, mods, [className])}>
+                <div className={cls.overlay} onClick={closeHandler}>
+                    <div
+                        className={cls.content}
+                        onClick={onContentClick}
+                    >
+                        {children}
+                    </div>
                 </div>
             </div>
-        </div>
+        </Portal>
+
     );
 };
