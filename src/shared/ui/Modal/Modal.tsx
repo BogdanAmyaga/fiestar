@@ -21,6 +21,8 @@ export const Modal:FC<ModalProps> = (props) => {
         className, children, isOpen, onClose,
     } = props;
 
+    const { theme } = useTheme();
+
     const [isClosing, setIsClosing] = useState(false);
     // !ReturnType извлекает тип возвращаемого значения функции Type.
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
