@@ -66,6 +66,12 @@ SizeLWithSquare.args = {
     square: true,
     size: EButtonSize.L,
 };
+export const Disabled = Template.bind({});
+Disabled.args = {
+    children: '+',
+    theme: EButtonTheme.BACKGROUND_INVERTED,
+    disabled: true
+};
 
 export const SizeXLWithSquare = Template.bind({});
 SizeXLWithSquare.args = {
